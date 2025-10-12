@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #3498DB;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 400px;
+    margin: 3rem auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+    padding: 2rem;
+    color: #2C3E50;
+}
+h1 {
+    text-align: center;
+    color: #2980B9;
+    margin-bottom: 2rem;
+}
+.section {
+    margin-bottom: 2rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2C3E50;
+    font-weight: bold;
+}
+input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #2C3E50;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #000000;
+}
+button {
+    width: 100%;
+    padding: 0.7rem 0;
+    background: #2980B9;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+button:hover {
+    background: #2C3E50;
+}
+h2 {
+    text-align: center;
+    color: #2980B9;
+    margin-bottom: 1rem;
+}
+#gananciaTexto {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2C3E50;
+    font-weight: bold;
+}
