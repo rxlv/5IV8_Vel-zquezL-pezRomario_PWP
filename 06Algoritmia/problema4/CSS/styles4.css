@@ -1,0 +1,41 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #333;
+            padding: 2rem;
+        }
+        .section {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin: 0.5rem 0 0.2rem 0;
+        }
+        input[type="number"] {
+            width: 80px;
+            padding: 0.3rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-bottom: 1rem;
+        }
+        button {
+            padding: 0.7rem 1.5rem;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2980b9;
+        }
