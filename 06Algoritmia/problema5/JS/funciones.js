@@ -18,4 +18,5 @@
             document.getElementById('barraHombres').style.width = porcentajeHombres + "%";
             document.getElementById('barraMujeres').style.width = porcentajeMujeres + "%";
 
-            document.getElementById('resultado').style.display = "block";
+                document.getElementById('resultado').style.display = "block";
+            });
