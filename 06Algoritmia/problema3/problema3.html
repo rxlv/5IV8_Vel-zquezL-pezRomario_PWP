@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Descuento en Tienda</title>
+    <link rel="stylesheet" href="CSS/style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calcula tu Pago Final con Descuento</h1>
+        <form id="formDescuento">
+            <div class="section">
+                <label for="totalCompra">Total de la compra:</label>
+                <input type="number" id="totalCompra" name="totalCompra" min="0" required>
+                <button type="submit">Calcular Pago Final</button>
+            </div>
+        </form>
+        <div id="resultado" class="section" style="display:none;">
+            <h2>Resultado</h2>
+            <p id="descuentoTexto"></p>
+            <p id="pagoFinalTexto"></p>
+        </div>
+    </div>
+</body>
+</html>
