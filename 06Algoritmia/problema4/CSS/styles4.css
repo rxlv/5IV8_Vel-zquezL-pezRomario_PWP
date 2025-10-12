@@ -1,24 +1,24 @@
 body {
     font-family: Arial, sans-serif;
-    background: #fff; /* Fondo blanco */
+    background: #fff; 
     color: #000000;
     padding: 2rem;
 }
 .section {
-    background: #3498DB; /* Cuadro azul */
+    background: #3498DB;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(44,62,80,0.08); /* #2C3E50 */
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08); 
     margin-bottom: 2rem;
     padding: 1.5rem;
 }
 h2 {
-    color: #fff; /* Título en blanco para contraste */
+    color: #fff;
     margin-bottom: 1rem;
 }
 label {
     display: block;
     margin: 0.5rem 0 0.2rem 0;
-    color: #fff; /* Etiquetas en blanco para contraste */
+    color: #fff; 
 }
 input[type="number"] {
     width: 80px;
