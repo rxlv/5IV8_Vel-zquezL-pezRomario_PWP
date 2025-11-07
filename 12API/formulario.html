@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Facts & Images</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="./JS/fetch.js"></script>
+    
+</head>
+<body>
+    <header class="header">
+        🐱 Datos Curiosos de Gatos 🐱
+    </header>
+
+    <main class="main-content">
+        <div class="cat-box">
+            <h2>¿Quieres saber algo interesante sobre los gatos?</h2>
+            <div class="cat-fact" id="factText">
+                ¡Presiona el botón para obtener un dato curioso!
+            </div>
+            <button class="get-fact-btn" onclick="getCatFact()">¡QUIERO SABER MÁS!</button>
+        </div>
+
+        <div class="cat-box">
+            <h2>¿Quieres ver un gatito adorable?</h2>
+            <div class="cat-image" id="imageContainer">
+                <img id="catImage" src="https://cataas.com/cat/says/¡Hola!" alt="Un gato aleatorio">
+            </div>
+            <button class="get-image-btn" onclick="getCatImage()">¡AVER OTRO!</button>
+        </div>
+    </main>
+<footer class="footer">
+    <a href="https://catfact.ninja" target="_blank">
+        <img src="https://catfact.ninja/favicon.ico" alt="Cat Facts API">
+    </a>
+    <a href="https://cataas.com" target="_blank">
+        <img src="./Assets/cataas.jpg" alt="Cat as a Service">
+    </a>
+    <a href="https://translate.google.com" target="_blank">
+        <img src="https://translate.google.com/favicon.ico" alt="Google Translate">
+    </a>
+    <a href="https://github.com/rxlv" target="_blank">
+        <img src="https://github.com/favicon.ico" alt="Mi GitHub">
+    </a>
+    <a href="../index.html" class="back-btn">REGRESAR AL INDEX</a>
+</footer>
+</body>
+</html>
