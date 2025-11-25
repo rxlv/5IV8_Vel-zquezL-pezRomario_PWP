@@ -22,6 +22,6 @@ const memoizedFn = memoize(function (a, b) {
     return a + b;
 })
 
-console.log(memoizedFn(2, 3)) // 5
-console.log(memoizedFn(2, 3)) // 5
-console.log(callCount) // 1
+console.log(memoizedFn(2, 3))
+console.log(memoizedFn(2, 3)) 
+console.log(callCount) 
