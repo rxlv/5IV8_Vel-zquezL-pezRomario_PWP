@@ -138,20 +138,36 @@ app.post('/bitacoras/update/:id', (req, res) => {
 });
 
 app.post('/bitacoras', (req, res) => {
-    const { id_disp, fecha_programada, tarea_realizada, tecnico_responsable, } = req.body;
+    const { id_disp, fecha_programada, tarea_realizada, tecnico_responsable } = req.body;
     const fechaActual = new Date();
     const fechaProg = new Date(fecha_programada);
+    
     if (fechaProg < fechaActual) {
         return res.status(400).send('La fecha programada no puede ser anterior a la fecha actual');
     }
 
-    const query = `INSERT INTO bitacora (id_disp, fecha_programada, tarea_realizada, tecnico_responsable) VALUES (${id_disp}, '${fecha_programada}', '${tarea_realizada}', '${tecnico_responsable}');`;
-    db.query(query, (error, results) => {
-        if (error) {
-            console.log('Error al crear el registro de bitácora: ' + error);
-            res.status(500).send('Error al crear el registro de bitácora');
-        }
-        res.redirect('/');
+    // Convertir id_disp a array si es string (cuando viene de select multiple)
+    const dispositivosArray = Array.isArray(id_disp) ? id_disp : [id_disp];
+    let completados = 0;
+    let errores = false;
+
+    // Insertar un registro por cada dispositivo seleccionado
+    dispositivosArray.forEach(disp_id => {
+        const query = `INSERT INTO bitacora (id_disp, fecha_programada, tarea_realizada, tecnico_responsable) VALUES (${disp_id}, '${fecha_programada}', '${tarea_realizada}', '${tecnico_responsable}');`;
+        db.query(query, (error, results) => {
+            if (error) {
+                console.log('Error al crear el registro de bitácora: ' + error);
+                errores = true;
+            }
+            completados++;
+            if (completados === dispositivosArray.length) {
+                if (errores) {
+                    res.status(500).send('Error al crear algunos registros de bitácora');
+                } else {
+                    res.redirect('/');
+                }
+            }
+        });
     });
 });
 

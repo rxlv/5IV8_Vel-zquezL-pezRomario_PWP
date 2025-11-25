@@ -16,13 +16,11 @@
     </header><br>
     <h1>Crear registro</h1>
     <form action="/bitacoras" method="post">
-        <label for="id_disp">Seleccione un dispositivo</label>
-        <select name="id_disp" id="id_disp">
-            <% dispositivos.forEach(function(dispositivo) { %>
-                <option value="<%= dispositivo.id %>">
-                    <%= dispositivo.nombre %>
-                </option>
-                <% }); %>
+        <label for="id_disp">Seleccione uno o más dispositivos</label>
+        <select name="id_disp" id="id_disp" multiple size="5" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+            <option value="Computadora">Computadora</option>
+            <option value="Impresora">Impresora</option>
+            <option value="Router">Router</option>
         </select>
         <label for="fecha_programada">Fecha programada</label>
         <input type="datetime-local" id="fecha_programada" name="fecha_programada" required>
